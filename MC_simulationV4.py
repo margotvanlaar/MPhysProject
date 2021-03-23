@@ -15,7 +15,7 @@ import visualisation
 
 
 def main():
-    print("Hello world")
+   
     # Open GIS population map data
     pop_map = pd.read_excel('gha_pd.xlsx', header = 0, dtype = float)
     
@@ -32,9 +32,9 @@ def main():
     # System parameters
     n_pharma = 2600              # Number of pharmacies
     n_sweeps = n_pharma * 500    # Number of sweeps for Monte Carlo simulation
-    max_dist = 31                # Maximum travel distance to pharmacy
     r_c = 15                     # Cut off radius for attraction
     r_r = 30                     # Cut off radius for repulsion
+    max_dist = r_r + 5                # Maximum travel distance to pharmacy
     T = 100                      # Temperature of system
     sf = 1.1 
     
